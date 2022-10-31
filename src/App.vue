@@ -1,32 +1,38 @@
-<template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+<template lang="pug">
+  .container
+    router-view
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'app'
 }
+</script>
 
-nav {
-  padding: 30px;
+<style lang="scss">
+  body {
+    font-family: 'Balsamiq Sans', Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    background: url('./assets/len.jpg') fixed no-repeat;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  * {
+    box-sizing: border-box;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
     }
   }
-}
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 </style>
